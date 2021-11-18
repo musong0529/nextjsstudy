@@ -1,7 +1,7 @@
 import {Key, ReactChild, ReactFragment, ReactPortal} from 'react';
 import {Card, Button, Container, Row, Col} from 'react-bootstrap';
 import {RatingView} from 'react-simple-star-rating';
-import Link from 'next/link'
+import Link from 'next/link';
 
 interface ItemListProps {
   description: string;
@@ -31,12 +31,14 @@ const ItemList = (props: any) => {
                       {item.brand} / {item.product_type}
                     </Card.Text>
                     <Card.Text>
-                      <RatingView ratingValue={item.rating} />
+                      <RatingView ratingValue={item.rating}/>
                     </Card.Text>
                     <Card.Text>
                       ${item.price}
                     </Card.Text>
-                    <Button variant="primary" href={`/View/${item.id}`}>Go somewhere</Button>
+                    <Link href={`/View/${item.id}`}>
+                      <Button variant="primary">Go Detail</Button>
+                    </Link>
                   </Card.Body>
                 </Card>
               </Col>
