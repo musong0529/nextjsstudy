@@ -1,7 +1,11 @@
+import {Container, Spinner} from 'react-bootstrap';
+
 const About = () => {
   return (
-    <div>About Screen!</div>
-  )
-}
+    <Container>
+      <div>About Screen!</div>
+    </Container>
+  );
+};
 
 export default About;
